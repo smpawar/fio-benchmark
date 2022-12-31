@@ -3,7 +3,7 @@
 
 # Change values in this section for your run
 # location where "Actual disk files" .Benchmark will run against these
-directory=/home/pawarsachin/fiotest
+directory=/home/user/fiotest
 
 # iops related parameters
 iodepth=256
