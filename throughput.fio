@@ -1,0 +1,23 @@
+; -- start job file --
+[read_throughput]
+
+# Change values in this section for your run
+# location where "Actual disk files" .Benchmark will run against these
+directory=/home/pawarsachin/fiotest
+
+# THROUGHPUT or BW  related parameters
+bs=1M
+
+# Other Parameters
+iodepth=2
+rw=randrw
+rwmixread=70
+ioengine=libaio
+direct=1
+size=10G
+numjobs=10
+runtime=60s
+ramp_time=2s
+verify=0
+group_reporting=1
+; -- end job file --
