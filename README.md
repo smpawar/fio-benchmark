@@ -16,3 +16,20 @@ fio iops.fio
 ```
 fio latency.fio
 ```
+
+### Database workload specific testing
+
+#### OLTP : Small Random I/O
+rw=randrw
+bs=1K
+
+
+#### OLAP : Large Sequential I/O
+
+rw=read
+bs=1M
+
+
+
+
+
