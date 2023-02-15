@@ -2,22 +2,25 @@
 [read_throughput]
 
 # Change values in this section for your run
-# location where "Actual disk files" .Benchmark will run against these
+# location where "Actual disk files". Benchmark will run against these. It should be on top of the filename mention in the device section below
 directory=/home/user/fiotest
 
 # latency related parameters
 rw=write
 
 # Other Parameters
-iodepth=2
+iodepth=1
 ioengine=libaio
 bs=4k
 direct=1
 size=10G
-#numjobs . For ideal results set it to max(abs(0.6*num_of_cpus) ) . So on 16 core machine set it for 10
 numjobs=1
 runtime=60s
 ramp_time=2s
 verify=0
 group_reporting=1
+
+# Change the filename to reflect the correct device to be tested
+[device]
+filename=/dev/sdb
 ; -- end job file --
